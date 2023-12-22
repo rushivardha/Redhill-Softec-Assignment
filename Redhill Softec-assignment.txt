@@ -1,0 +1,59 @@
+1.Write a program to Extract Weather Data from Google in Python
+ans:
+import requests
+from bs4 import BeautifulSoup
+
+search ="weather in bangalore"
+URL=f"https://www.google.com/search?q={search}"
+req=requests.get(url)
+sav=BeautifukSoup(req.text,"html.parser")
+update=sav.find("div",class="BNeawe").text
+print(update)
+----------------------------------------------------
+2. Write Python program to check the validity of a Password.
+Primary conditions for password validation
+
+import re
+flag=0
+password=input("enter a password")
+if not re.search('[a-z]',password):
+    flag=1
+if not re.search('[A-Z]',password):
+    flag=1
+if not re.search('[0-9]',password):
+    flag=1
+if not re.search('[_@$]',password):
+    flag=1
+if len(password)<6:
+    flag=1
+if (flag==0):
+    print("password is valid")
+else:
+    print("passworf is invalid")
+            -----------------------------
+3.What are the main differences between C and C++?
+			c
+-------------------------------------			
+  C is not an object-oriented language. It lacks features such as classes, objects, and inheritance.
+  C has a simpler syntax compared to C++.
+  C uses standard I/O functions like printf and scanf for file handling.
+  C is often used for system-level programming, embedded systems, and low-level programming.
+
+			c++
+-----------------------------------------------
+ C++ is widely used for application development, game development, and other scenarios where object-oriented programming is beneficial.
+ C++ is designed to support object-oriented programming. It introduces classes and objects, encapsulation, inheritance, and polymorphism.
+C++ extends C syntax with additional features like classes and function overloading.
+C++ introduces file stream classes (ifstream, ofstream, fstream) for file handling.
+		------------------------------------
+
+4.What do you know about Timers in Arduino?
+
+ANS-
+I understand that timers in Arduino are essential for managing time-related tasks like generating PWM signals and creating time delays. They play a key role in functions such as millis() and micros(). Timers can be configured for interrupts, enabling specific tasks at regular intervals. I'm aware of their importance in controlling LEDs, motors, and executing time-sensitive operations. I'm eager to explore and apply timer functionalities for diverse Arduino projects."
+	--------------------------------------------------
+
+5.What are some commonly used libraries in Arduino?
+
+ANS-
+ I'm familiar with some fundamental Arduino libraries that are commonly used in various projects. These include the Wire Library for I2C communication, Servo Library for controlling servo motors, and SPI Library for Serial Peripheral Interface communication. I've also come across essential libraries like EEPROM, SD, and DHT for data storage, SD card interfacing, and temperature/humidity sensing, respectively. While I'm still exploring, I understand the significance of these libraries in simplifying complex tasks and look forward to expanding my knowledge by exploring more advanced libraries as I gain hands-on experience in Arduino development."
